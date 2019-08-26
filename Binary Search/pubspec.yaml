@@ -1,0 +1,4 @@
+name: binary_search
+
+dev_dependencies:
+  test: ^1.6.8
