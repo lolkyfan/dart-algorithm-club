@@ -2,6 +2,8 @@
 /// and [upperRange] define the portion of the list to be searched - usually 0 and [list].count.
 /// 
 /// Returns `null` if the key is not present inside the list.
+/// 
+/// Performance is **O(log n)**.
 int binarySearch<T extends num>(List<T> list, { T key, int lowerRange, int upperRange }) {
   if (lowerRange >= upperRange) {
     // This means that the search key is not present in the list.
