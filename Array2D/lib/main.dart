@@ -6,7 +6,7 @@ class Array2D<T> {
   final int rows;
   List<T> _array;
 
-  /// Returns a 2D array filled with [initialValue] of [columns] x [rows] size.
+  /// Returns a 2D array of [columns] x [rows] size filled with [initialValue].
   Array2D(this.columns, this.rows, T initialValue) {
     assert(columns > 0, 'Columns must be a positive number.');
     assert(rows > 0, 'Rows must be a positive number.');
