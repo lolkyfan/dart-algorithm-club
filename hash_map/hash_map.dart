@@ -1,10 +1,10 @@
 /// Entity to hold key value pairs.
 /// This class is needed to avoid collisions in the hash table
 /// using chaining.
-class _Entity<K, V> {
-  _Entity({required this.key, required this.value});
+class Entity<K, V> {
+  Entity({required this.key, required this.value});
 
-  K key;
+  final K key;
 
   /// Mutable `value` to provide ability to replace it in case
   /// the element with a given `key` already exists in the chain.
@@ -12,11 +12,13 @@ class _Entity<K, V> {
 }
 
 /// Bucket to hold a chain of elements to avoid collisions.
-typedef Bucket = List<_Entity>;
+typedef Bucket<K, V> = List<Entity<K, V>>;
 
 class HashMap<K, V> {
-  final _buckets = List<Bucket?>.filled(10, null);
+  final _buckets = List<Bucket<K, V>?>.filled(10, null);
 
+  /// Returns a value for the given key.
+  /// If the key is not found throws [StateError].
   operator [](K key) {
     final index = _indexOf(key: key);
     final bucket = _buckets[index];
@@ -30,13 +32,13 @@ class HashMap<K, V> {
     final bucket = _buckets[index];
 
     if (bucket == null) {
-      _buckets[index] = [_Entity(key: key, value: value)];
+      _buckets[index] = [Entity<K, V>(key: key, value: value)];
     } else {
       for (final existing in bucket) {
         if (existing.key == key) {
           existing.value = value;
         } else {
-          bucket.add(_Entity(key: key, value: value));
+          bucket.add(Entity(key: key, value: value));
         }
       }
     }
