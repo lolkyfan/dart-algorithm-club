@@ -1,6 +1,8 @@
 /// Returns the index of the key, or `null` if the key is not found.
 /// If [bounds] is `null`, zero is used for lower bound
 /// and length of [array] for upper bound.
+///
+/// Complexity: **O(log n)**
 int? recursiveBinarySearch<T extends num>({
   required List<T> array,
   required T key,
@@ -33,6 +35,8 @@ int? recursiveBinarySearch<T extends num>({
 }
 
 /// Returns the index of the key, or `null` if the key is not found.
+///
+/// Complexity: **O(log n)**
 int? iterativeBinarySearch<T extends num>({
   required List<T> array,
   required T key,
