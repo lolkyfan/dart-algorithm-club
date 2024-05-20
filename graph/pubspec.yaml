@@ -1,0 +1,6 @@
+name: graph
+
+environment:
+  sdk: ^3.3.0
+dev_dependencies:
+  test: ^1.25.5
