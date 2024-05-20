@@ -1,0 +1,56 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "binary_search",
+      "cwd": "binary_search",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
+      "name": "binary_tree",
+      "cwd": "binary_tree",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
+      "name": "graph",
+      "cwd": "graph",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
+      "name": "hash_map",
+      "cwd": "hash_map",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
+      "name": "heap",
+      "cwd": "heap",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
+      "name": "linked_list",
+      "cwd": "linked_list",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
+      "name": "merge_sort",
+      "cwd": "merge_sort",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
+      "name": "stack",
+      "cwd": "stack",
+      "request": "launch",
+      "type": "dart"
+    }
+  ]
+}
